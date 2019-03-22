@@ -1,0 +1,10 @@
+spring:
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8059
+
+logging:
+  file: logs/finance-logging.log
+
