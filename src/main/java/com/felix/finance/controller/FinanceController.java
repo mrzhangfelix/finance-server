@@ -28,12 +28,8 @@ public class FinanceController {
     private static final String separator =File.separator;
 
 
-    @RequestMapping("/fundIncome")
-    public String getbyicare(String num){
+    public String executePython(String[] args1){
         try {
-            File directory = new File("");//设定为当前文件夹
-            String[] args1 = new String[] { "python", directory.getAbsolutePath()+separator+"script"+separator+"fundIncome.py"};
-            logger.info(directory.getAbsolutePath()+separator+"script"+separator+"fundIncome.py");
             Process pr=Runtime.getRuntime().exec(args1);
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     pr.getInputStream(), "GBK"));
@@ -42,7 +38,7 @@ public class FinanceController {
             while ((line = in.readLine()) != null) {
                 sb.append(line);
             }
-            logger.info("res::"+sb.toString());
+//            logger.info("res::"+sb.toString());
             in.close();
             pr.waitFor();
             return sb.toString();
@@ -50,43 +46,12 @@ public class FinanceController {
         catch (Exception e) {
             logger.info(e.getMessage());
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "group_name_list_error";
     }
 
-//    实时更新数据
-    @RequestMapping("/refreshFundData")
-    public String refreshFundData(){
-        try {
-            File directory = new File("");//设定为当前文件夹
-            String[] args1 = new String[] { "python", directory.getAbsolutePath()+separator+"script"+separator+"refreshFundData.py"};
-            logger.info(directory.getAbsolutePath()+separator+"script"+separator+"refreshFundData.py");
-            Process pr=Runtime.getRuntime().exec(args1);
-            BufferedReader in = new BufferedReader(new InputStreamReader(
-                    pr.getInputStream(), "GBK"));
-            String line;
-            StringBuilder sb=new StringBuilder();
-            while ((line = in.readLine()) != null) {
-                sb.append(line);
-            }
-            logger.info("res::"+sb.toString());
-            in.close();
-            pr.waitFor();
-            return sb.toString();
-        }
-        catch (Exception e) {
-            logger.info(e.getMessage());
-            e.printStackTrace();
-        }
-        return "updetefundjson_error";
-    }
-
-//    获取今日配置文件内容
-    @RequestMapping("/getTodayfundjson")
-    public String getTodayfundjson(){
+    public String getfileContent(String filePath){
         logger.info("开始获取今日配置");
-        File directory = new File("");
-        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
         StringBuffer sb = new StringBuffer();
         try {
             FileUtils.readToBuffer(sb, filePath);
@@ -95,6 +60,27 @@ public class FinanceController {
         }
 //        logger.info("今日配置：："+sb.toString());
         return sb.toString();
+
+    }
+
+//    实时更新数据
+    @RequestMapping("/refreshFundData")
+    public String refreshFundData(){
+
+        File directory = new File("");//设定为当前文件夹
+        String[] args1 = new String[] { "python", directory.getAbsolutePath()+separator+"script"+separator+"refreshFundData.py"};
+        logger.info(directory.getAbsolutePath()+separator+"script"+separator+"refreshFundData.py");
+        return executePython(args1);
+
+    }
+
+//    获取今日配置文件内容
+    @RequestMapping("/getTodayfundjson")
+    public String getTodayfundjson(){
+        logger.info("开始获取今日配置");
+        File directory = new File("");
+        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
+        return getfileContent(filePath);
     }
 
 //    更新配置文件
@@ -105,17 +91,17 @@ public class FinanceController {
         Date now = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//可以方便地修改日期格式
         //判断配置文件是不是最新
-        String curJson=getTodayfundjson();
+        File directory = new File("");
+        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
+        String curJson=getfileContent(filePath);
         JSONObject obj = JSON.parseObject(curJson);
         String gztime=obj.get("gztime").toString();
-        File directory = new File("");
         String lastTradingDate = getLastTradingDate();
         if(lastTradingDate.equals(gztime)){
             res="当前配置已经是最新"+lastTradingDate+"的配置！无需更新";
             return res;
         }else{
             String newfilePath= directory.getAbsolutePath()+separator+"history"+separator+lastTradingDate+".json";
-            String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
             File source=new File(newfilePath);
             File dest=new File(filePath);
             try {
@@ -197,28 +183,10 @@ public class FinanceController {
     //    获取上一个交易日日期
     @RequestMapping("/getLastTradingDate")
     public String getLastTradingDate(){
-        try {
             File directory = new File("");//设定为当前文件夹
             String[] args1 = new String[] { "python", directory.getAbsolutePath()+separator+"script"+separator+"getLastTradingDate.py"};
             logger.info(directory.getAbsolutePath()+separator+"script"+separator+"getLastTradingDate.py");
-            Process pr=Runtime.getRuntime().exec(args1);
-            BufferedReader in = new BufferedReader(new InputStreamReader(
-                    pr.getInputStream(), "GBK"));
-            String line;
-            StringBuilder sb=new StringBuilder();
-            while ((line = in.readLine()) != null) {
-                sb.append(line);
-            }
-            logger.info("上一个交易日::"+sb.toString());
-            in.close();
-            pr.waitFor();
-            return sb.toString();
-        }
-        catch (Exception e) {
-            logger.info(e.getMessage());
-            e.printStackTrace();
-        }
-        return "getLastTradingDate  error!";
+            return executePython(args1);
     }
 
     @RequestMapping("/test")
