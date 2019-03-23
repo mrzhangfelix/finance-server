@@ -3,7 +3,6 @@
 import json
 import traceback
 import requests
-from bs4 import BeautifulSoup
 import time
 import codecs
 import os
@@ -12,6 +11,7 @@ current_milli_time = lambda: int(round(time.time() * 1000))
 
 base_url = 'http://fundgz.1234567.com.cn/js/{}.js?rt={}'
 sum = 0
+gztime = ''
 
 def get_html(url):
     try:
@@ -37,6 +37,8 @@ def get_NewAmount(url,amount):
         yingli=round(yingli,2)
         zhangfu=fundinfo['gszzl']+'%'
         name=fundinfo['name']
+        global gztime
+        gztime=fundinfo['gztime']
         global sum
         sum+=yingli
     except BaseException as e:
@@ -76,6 +78,7 @@ def main(base_url):
         fund['zhangfu'] = zhangfu
         fund['fundName'] = name
     fundconf['todayIncameSum'] = round(sum,2)
+    fundconf['gztime'] = gztime[0:10]
     strRes=str(fundconf).replace("'",'"')
     strRes=strRes.replace(",",",\n\t")
     strRes=strRes.replace("[","[\n\t")

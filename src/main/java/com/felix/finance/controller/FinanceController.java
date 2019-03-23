@@ -93,7 +93,7 @@ public class FinanceController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        logger.info("今日配置：："+sb.toString());
+//        logger.info("今日配置：："+sb.toString());
         return sb.toString();
     }
 
@@ -102,25 +102,35 @@ public class FinanceController {
     public String updatefundjson(){
         logger.info("开始更新今日配置");
         String res="失败";
-        File directory = new File("");
         Date now = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//可以方便地修改日期格式
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(now);
-        calendar.set(Calendar.DATE, calendar.get(Calendar.DATE) - 1);
-        String yesterday = dateFormat.format( calendar.getTime() );
-        String newfilePath= directory.getAbsolutePath()+separator+"history"+separator+yesterday+".json";
-        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
-        File source=new File(newfilePath);
-        File dest=new File(filePath);
-        try {
-            FileUtils.copyFileUsingFileStreams(source,dest);
-        } catch (IOException e) {
-            e.printStackTrace();
+        //判断配置文件是不是最新
+        String curJson=getTodayfundjson();
+        JSONObject obj = JSON.parseObject(curJson);
+        String gztime=obj.get("gztime").toString();
+        File directory = new File("");
+        String lastTradingDate = getLastTradingDate();
+        if(lastTradingDate.equals(gztime)){
+            res="当前配置已经是最新"+lastTradingDate+"的配置！无需更新";
+            return res;
+        }else{
+            String newfilePath= directory.getAbsolutePath()+separator+"history"+separator+lastTradingDate+".json";
+            String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
+            File source=new File(newfilePath);
+            File dest=new File(filePath);
+            try {
+                FileUtils.copyFileUsingFileStreams(source,dest);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            res="成功更新配置为 上一个交易日："+lastTradingDate+"时间的配置！";
+//            logger.info("更新配置：："+res);
+            return res;
         }
-        res="成功";
-        logger.info("更新配置：："+res);
-        return res;
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTime(now);
+//        calendar.set(Calendar.DATE, calendar.get(Calendar.DATE) - 1);
+//        String yesterday = dateFormat.format( calendar.getTime() );
     }
 
 
@@ -153,10 +163,9 @@ public class FinanceController {
         }
         FileUtils.writeStringtoFile(obj.toString(),filePath);
         res="成功";
-        logger.info("更新配置：："+res);
+//        logger.info("更新配置：："+res);
         return res;
     }
-
 
     //    添加一组数据
     @RequestMapping("/addJsonData")
@@ -183,6 +192,33 @@ public class FinanceController {
         res="成功";
         logger.info("添加数据：："+res);
         return res;
+    }
+
+    //    获取上一个交易日日期
+    @RequestMapping("/getLastTradingDate")
+    public String getLastTradingDate(){
+        try {
+            File directory = new File("");//设定为当前文件夹
+            String[] args1 = new String[] { "python", directory.getAbsolutePath()+separator+"script"+separator+"getLastTradingDate.py"};
+            logger.info(directory.getAbsolutePath()+separator+"script"+separator+"getLastTradingDate.py");
+            Process pr=Runtime.getRuntime().exec(args1);
+            BufferedReader in = new BufferedReader(new InputStreamReader(
+                    pr.getInputStream(), "GBK"));
+            String line;
+            StringBuilder sb=new StringBuilder();
+            while ((line = in.readLine()) != null) {
+                sb.append(line);
+            }
+            logger.info("上一个交易日::"+sb.toString());
+            in.close();
+            pr.waitFor();
+            return sb.toString();
+        }
+        catch (Exception e) {
+            logger.info(e.getMessage());
+            e.printStackTrace();
+        }
+        return "getLastTradingDate  error!";
     }
 
     @RequestMapping("/test")
