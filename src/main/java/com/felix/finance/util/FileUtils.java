@@ -2,6 +2,7 @@ package com.felix.finance.util;
 import java.io.*;
 
 public class FileUtils {
+//    读取文件内容到StringBuffer
     public static void readToBuffer(StringBuffer buffer, String filePath) throws IOException {
         InputStream is = new FileInputStream(filePath);
         String line; // 用来保存每行读取的内容
@@ -16,6 +17,7 @@ public class FileUtils {
         is.close();
     }
 
+//    拷贝文件
     public static void copyFileUsingFileStreams(File source, File dest)
             throws IOException {
         InputStream input = null;
@@ -34,6 +36,7 @@ public class FileUtils {
         }
     }
 
+//    str写入文件
     public static void writeStringtoFile(String str,String filename){
         FileWriter writer;
         try {
@@ -44,5 +47,17 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+//返回文件内容
+    public static String getfileContent(String filePath){
+        StringBuffer sb = new StringBuffer();
+        try {
+            FileUtils.readToBuffer(sb, filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+
     }
 }
