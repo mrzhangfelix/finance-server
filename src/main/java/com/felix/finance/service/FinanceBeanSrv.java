@@ -21,8 +21,7 @@ public class FinanceBeanSrv {
     public String changeJsonByCode(String fundcode,String add,String amountChange,String fundamount){
         long startTime=System.currentTimeMillis();
         String res="失败";
-        File directory = new File("");
-        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
+        String filePath=FileUtils.getfilePath("script","fund.json");
         String str=FileUtils.getfileContent(filePath).replaceAll("\"","\'");
         FundJson fundJson=(FundJson)JSONObject.parseObject(str, FundJson.class);
         List<FundInfo> fundlist=fundJson.getFundlist();

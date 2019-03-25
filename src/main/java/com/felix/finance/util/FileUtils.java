@@ -2,6 +2,8 @@ package com.felix.finance.util;
 import java.io.*;
 
 public class FileUtils {
+
+    private static final String separator =File.separator;
 //    读取文件内容到StringBuffer
     public static void readToBuffer(StringBuffer buffer, String filePath) throws IOException {
         InputStream is = new FileInputStream(filePath);
@@ -59,5 +61,11 @@ public class FileUtils {
         }
         return sb.toString();
 
+    }
+
+    public static String getfilePath(String dir,String filename){
+        File directory = new File("");
+        String filePath= directory.getAbsolutePath()+separator+dir+separator+filename;
+        return filePath;
     }
 }
