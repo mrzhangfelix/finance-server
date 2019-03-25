@@ -35,7 +35,7 @@ def get_NewAmount(url,amount):
         amountNew=round(amountNew,2)
         yingli=float(fundinfo['gszzl'])*amount/100
         yingli=round(yingli,2)
-        zhangfu=fundinfo['gszzl']+'%'
+        zhangfu=float(fundinfo['gszzl'])
         name=fundinfo['name']
         global gztime
         gztime=fundinfo['gztime']
@@ -72,7 +72,7 @@ def main(base_url):
         zhangfuList.append(zhangfu)
         namelist.append(name)
     for fund,amountNew,yingli,zhangfu,name in zip(fundconf['fundlist'],amountNewlist,yingliList,zhangfuList,namelist):
-        fund['fundamount'] = amountNew + int(fund['add']) + int(fund['amountChange'])
+        fund['fundamount'] = amountNew
         fund['amountChange'] = 0
         fund['yingli'] = yingli
         fund['zhangfu'] = zhangfu
@@ -80,13 +80,6 @@ def main(base_url):
     fundconf['todayIncameSum'] = round(sum,2)
     fundconf['gztime'] = gztime[0:10]
     strRes=str(fundconf).replace("'",'"')
-    strRes=strRes.replace(",",",\n\t")
-    strRes=strRes.replace("[","[\n\t")
-    strRes=strRes.replace("{","{\n\t")
-    strRes=strRes.replace("}","\n}")
-    filename=time.strftime("history\\%Y-%m-%d.json", time.localtime())
-    with codecs.open(filename, 'w' ,"utf-8") as f:
-        f.write(str(strRes))
     print(str(strRes))
 
 if __name__ == '__main__':
