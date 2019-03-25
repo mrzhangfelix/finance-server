@@ -66,8 +66,7 @@ public class FinanceController {
     @RequestMapping("/changeJsonByCode")
     public String changeJsonByCode(String fundcode,String fundamount,String add,String amountChange){
         logger.info("fundcode:," + fundcode + "fundamount:," +fundamount+ "add:,"+add+ "amountChange:"+amountChange);
-        String res=financeSrv.changeJsonByCodeNew(fundcode,add,amountChange,fundamount);
-        String res2=financeSrv.changeJsonByCode(fundcode,add,amountChange,fundamount);
+        String res=financeSrv.changeJsonByCode(fundcode,add,amountChange,fundamount);
         return res;
     }
 
