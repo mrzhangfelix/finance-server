@@ -12,9 +12,8 @@ indexInfolist={}
 # 0:name 1：今开 2：昨收  3：现值  4：最高  5：最低  6：  7：  8：成交量（手） 9：成交额
 def get_html(url):
     try:
-        proxy = { "http": "http://z00475199:zpf805908873!@proxy.huawei.com:8080" }
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0'}
-        r=requests.get(url,timeout=30, headers = headers, proxies = proxy)
+        r=requests.get(url,timeout=30, headers = headers)
         r.raise_for_status()
         r.encoding='utf-8'
         return r.text
