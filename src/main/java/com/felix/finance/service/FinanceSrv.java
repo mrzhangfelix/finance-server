@@ -6,6 +6,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.felix.finance.entity.FundInfo;
 import com.felix.finance.entity.FundJson;
 import com.felix.finance.util.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -15,6 +17,8 @@ import java.util.List;
 
 @Service
 public class FinanceSrv {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     private static final String separator =File.separator;
 
 //    使用JSONObject的方式处理字符串，此方法要比javabean的方式更快，不过javabean的方式处理很方便
@@ -40,6 +44,7 @@ public class FinanceSrv {
         System.out.println("JavaObject方式程序运行时间： "+(endTime-startTime)+"ms");
         return res;
     }
+
 
     public String addJsonData(String fundcode,
                               String fundamount){
@@ -72,6 +77,7 @@ public class FinanceSrv {
             return res;
         }else{
             String newfilePath= directory.getAbsolutePath()+separator+"history"+separator+lastTradingDate+".json";
+            logger.info(" 从 "+newfilePath+" to "+filePath);
             File source=new File(newfilePath);
             File dest=new File(filePath);
             try {
