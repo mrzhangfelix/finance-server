@@ -29,7 +29,7 @@ def main(base_url):
     gztime=fundinfo['gztime']
     jzrq=fundinfo['jzrq']
     today=time.strftime("%Y-%m-%d", time.localtime())
-    if today == gztime :
+    if today == gztime[0:10]  :
         print(jzrq)
     else:
         print(gztime[0:10])
