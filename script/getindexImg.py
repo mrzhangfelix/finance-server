@@ -7,7 +7,10 @@ import time
 import codecs
 import os
 
-base_url = 'http://hq.sinajs.cn/list=sz399001,sh000001,sz399006,sh000300'
+base_url = 'http://img1.money.126.net/chart/hs/time/210x140/0000001.png?{$VERSION}'
+base_url = 'http://img1.money.126.net/chart/hs/time/210x140/1399001.png?{$VERSION}'
+base_url = 'http://img1.money.126.net/chart/hs/time/210x140/1399300.png?{$VERSION}'
+# http://d1.biz.itc.cn/q/zs/001/000001/tline.png
 indexInfolist={}
 # 0:name 1：今开 2：昨收  3：现值  4：最高  5：最低  6：  7：  8：成交量（手） 9：成交额
 def get_html(url):
