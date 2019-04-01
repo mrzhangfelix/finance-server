@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import json
 import traceback
 import requests
-import time
-import codecs
-import os
 
-indexlist=['0000001','1399001','1399300']
+indexlist=['0000001','1399001','1399300','1399006']
 base_url = 'http://img1.money.126.net/chart/hs/time/540x360/'
 # base_url = 'http://img1.money.126.net/chart/hs/time/210x140/1399001.png?{$VERSION}'
 # base_url = 'http://img1.money.126.net/chart/hs/time/210x140/1399300.png?{$VERSION}'
