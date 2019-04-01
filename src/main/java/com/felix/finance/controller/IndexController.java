@@ -6,11 +6,14 @@ import com.felix.finance.util.PythonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 @RestController
@@ -33,6 +36,18 @@ public class IndexController {
         File directory = new File("");
         String filePath= directory.getAbsolutePath()+separator+"script"+separator+"getindexData.py";
         return PythonUtils.executePython(filePath);
+    }
+
+
+    @RequestMapping(value = "/getImg",produces = MediaType.IMAGE_JPEG_VALUE)
+    public byte[] getImage(String imgName) throws IOException {
+        File directory = new File("");
+        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"data"+separator+imgName+".png";
+        File file = new File(filePath);
+        FileInputStream inputStream = new FileInputStream(file);
+        byte[] bytes = new byte[inputStream.available()];
+        inputStream.read(bytes, 0, inputStream.available());
+        return bytes;
     }
 
 
