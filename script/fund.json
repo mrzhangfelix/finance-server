@@ -1,105 +1,122 @@
 {
-  "gztime":"2019-03-25",
-  "todayIncameSum":-381.61,
-  "fundlist":[
-    {
-      "add":"100",
-      "zhangfu":"4.06%",
-      "yingli":164.25,
-      "amountChange":"0",
-      "fundcode":"005693",
-      "fundamount":"5116.44",
-      "fundName":"广发中证军工ETF联接C"
-    },
-    {
-      "add":"100",
-      "zhangfu":"-2.84%",
-      "yingli":-102.13,
-      "amountChange":0,
-      "fundcode":"004753",
-      "fundamount":5429.08,
-      "fundName":"广发中证传媒ETF联接C"
-    },
-    {
-      "add":"100",
-      "zhangfu":"-1.66%",
-      "yingli":-64.77,
-      "amountChange":"0",
-      "fundcode":"002978",
-      "fundamount":"4440.50",
-      "fundName":"广发医药卫生联接C"
-    },
-    {
-      "add":"100",
-      "zhangfu":"-0.98%",
-      "yingli":-36.44,
-      "amountChange":"0",
-      "fundcode":"002984",
-      "fundamount":"4155.40",
-      "fundName":"广发中证环保ETF联接C"
-    },
-    {
-      "add":"100",
-      "zhangfu":"-1.40%",
-      "yingli":-87.6,
-      "amountChange":"0",
-      "fundcode":"004744",
-      "fundamount":"6772.10",
-      "fundName":"易方达创业板ETF联接C"
-    },
-    {
-      "add":"100",
-      "zhangfu":"-2.25%",
-      "yingli":-66.75,
-      "amountChange":0,
-      "fundcode":"005918",
-      "fundamount":4025.76,
-      "fundName":"天弘沪深300指数C"
-    },
-    {
-      "add":"100",
-      "zhangfu":"-0.60%",
-      "yingli":-30.59,
-      "amountChange":"0",
-      "fundcode":"001630",
-      "fundamount":"6395.59",
-      "fundName":"天弘中证计算机主题指数C"
-    },
-    {
-      "add":"0",
-      "zhangfu":"-3.49%",
-      "yingli":-21.41,
-      "amountChange":"0",
-      "fundcode":"001553",
-      "fundamount":"617.44",
-      "fundName":"天弘中证证券保险C"
-    },
-    {
-      "add":"200",
-      "zhangfu":"-1.21%",
-      "yingli":-30.14,
-      "amountChange":0,
-      "fundcode":"005919",
-      "fundamount":4297.61,
-      "fundName":"天弘中证500指数C"
-    },
-    {
-      "add":"0",
-      "zhangfu":"-1.21%",
-      "yingli":-29.16,
-      "amountChange":"0",
-      "fundcode":"002907",
-      "fundamount":"2359.56",
-      "fundName":"南方中证500量化增强C"
-    },
-    {
-      "add":"0",
-      "zhangfu":"-1.21%",
-      "yingli":-31.85,
-      "amountChange":0,
-      "fundcode":"004348",
-      "fundamount":2598.32,
-      "fundName":"南方中证500ETF联接C"
-    }
-  ]
+	"gztime": "2019-04-01",
+	 "todayIncameSum": 2030.78,
+	 "fundlist": [
+	{
+	"add": "100",
+	 "zhangfu": "4.48%",
+	 "yingli": 231.46,
+	 "amountChange": 0,
+	 "fundcode": "005693",
+	 "fundamount": 5498.05,
+	 "fundName": "广发中证军工ETF联接C"
+},
+	 {
+	"add": "100",
+	 "zhangfu": "3.57%",
+	 "yingli": 193.79,
+	 "amountChange": 0,
+	 "fundcode": "004753",
+	 "fundamount": 5722.16,
+	 "fundName": "广发中证传媒ETF联接C"
+},
+	 {
+	"add": "100",
+	 "zhangfu": "2.46%",
+	 "yingli": 121.78,
+	 "amountChange": 0,
+	 "fundcode": "002978",
+	 "fundamount": 5172.26,
+	 "fundName": "广发医药卫生联接C"
+},
+	 {
+	"add": "100",
+	 "zhangfu": "3.53%",
+	 "yingli": 146.7,
+	 "amountChange": 0,
+	 "fundcode": "002984",
+	 "fundamount": 4402.57,
+	 "fundName": "广发中证环保ETF联接C"
+},
+	 {
+	"add": "100",
+	 "zhangfu": "3.78%",
+	 "yingli": 275.12,
+	 "amountChange": 0,
+	 "fundcode": "004744",
+	 "fundamount": 7653.39,
+	 "fundName": "易方达创业板ETF联接C"
+},
+	 {
+	"add": "100",
+	 "zhangfu": "2.49%",
+	 "yingli": 100.22,
+	 "amountChange": 0,
+	 "fundcode": "005918",
+	 "fundamount": 4225.29,
+	 "fundName": "天弘沪深300指数C"
+},
+	 {
+	"add": "100",
+	 "zhangfu": "5.26%",
+	 "yingli": 336.4,
+	 "amountChange": 0,
+	 "fundcode": "001630",
+	 "fundamount": 6831.75,
+	 "fundName": "天弘中证计算机主题指数C"
+},
+	 {
+	"add": "0",
+	 "zhangfu": "1.98%",
+	 "yingli": 12.22,
+	 "amountChange": 0,
+	 "fundcode": "001553",
+	 "fundamount": 629.59,
+	 "fundName": "天弘中证证券保险C"
+},
+	 {
+	"add": "200",
+	 "zhangfu": "3.57%",
+	 "yingli": 153.44,
+	 "amountChange": 0,
+	 "fundcode": "005919",
+	 "fundamount": 4651.37,
+	 "fundName": "天弘中证500指数C"
+},
+	 {
+	"add": "0",
+	 "zhangfu": "3.57%",
+	 "yingli": 84.22,
+	 "amountChange": 0,
+	 "fundcode": "002907",
+	 "fundamount": 2443.25,
+	 "fundName": "南方中证500量化增强C"
+},
+	 {
+	"add": "0",
+	 "zhangfu": "3.57%",
+	 "yingli": 92.77,
+	 "amountChange": 0,
+	 "fundcode": "004348",
+	 "fundamount": 2691.35,
+	 "fundName": "南方中证500ETF联接C"
+},
+	 {
+	"add": "0",
+	 "zhangfu": "3.78%",
+	 "yingli": 78.16,
+	 "amountChange": 0,
+	 "fundcode": "006928",
+	 "fundamount": 2145.83,
+	 "fundName": "长城创业板指数增强C"
+},
+	 {
+	"add": "0",
+	 "zhangfu": "3.57%",
+	 "yingli": 204.5,
+	 "amountChange": 0,
+	 "fundcode": "501037",
+	 "fundamount": 5932.7,
+	 "fundName": "汇添富中证500C"
+}]
 }
