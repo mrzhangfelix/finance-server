@@ -23,7 +23,7 @@ def get_png(url):
 
 def main(base_url):
     for index in indexlist:
-        filename='data\\'+index+'.png'
+        filename='..\\data\\indexImg\\'+index+'.png'
         url=base_url+index+'.png'
         open(filename, 'wb').write(get_png(url))
 
