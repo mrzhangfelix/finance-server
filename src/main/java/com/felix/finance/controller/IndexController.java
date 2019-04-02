@@ -42,7 +42,7 @@ public class IndexController {
     @RequestMapping(value = "/getImg",produces = MediaType.IMAGE_JPEG_VALUE)
     public byte[] getImage(String imgName) throws IOException {
         File directory = new File("");
-        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"data"+separator+imgName+".png";
+        String filePath= directory.getAbsolutePath()+separator+"data"+separator+"indexImg"+separator+imgName+".png";
         File file = new File(filePath);
         FileInputStream inputStream = new FileInputStream(file);
         byte[] bytes = new byte[inputStream.available()];
