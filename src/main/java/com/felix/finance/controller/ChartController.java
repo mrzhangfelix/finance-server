@@ -43,7 +43,7 @@ public class ChartController {
         String today=dateFormat.format(new Date());
         String filePath= directory.getAbsolutePath()+separator+"data"+separator+"yingliList"+separator+today+".txt";
         String str = FileUtils.getfileContent(filePath);
-        String[] strList=str.split(";");
+        String[] strList=str.split(";\n");
         List resList=new ArrayList();
         for(String i : strList){
             if (i.equals("\n")){
