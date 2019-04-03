@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import datetime
 import json
 import traceback
 import requests
@@ -42,6 +43,10 @@ def cal_sum(url,amount):
         print(str(traceback.format_exc()))
 
 def main():
+    global timer
+    now = datetime.datetime.now()
+    if (now.hour==11 and now.minute==31)or(now.hour==15 and now.minute==1):
+        timer.cancel()
     codelist=[]
     amountlist=[]
     url_list=[]
@@ -53,6 +58,8 @@ def main():
         amountlist.append(float(fund['fundamount']))
     for i in codelist:
         url_list.append(base_url.format(i,current_milli_time()))
+    global sum
+    sum=0
     for url,amount in zip(url_list,amountlist):
         cal_sum(url,amount)
     fileName=module_path+"\\..\\data\\yingliList\\"+gztime[:10]+".txt"
@@ -60,21 +67,9 @@ def main():
     with codecs.open(fileName, 'a' ,"utf-8") as f:
         f.write(gztime+','+str(round(sum,2))+';\n')
     print(gztime+','+str(round(sum,2))+';')
-    global timer
     timer = threading.Timer(60, main)
     timer.start()
 
-def fun_timer(sum):
-    print("ceshi定时器！")
-    global timer
-    timer = threading.Timer(60, fun_timer,[sum])
-    timer.start()
-
-
 if __name__ == '__main__':
-    # sum=20
-    # timer = threading.Timer(2, fun_timer ,[sum])
-    # timer.start()
-    # main(base_url)
     timer = threading.Timer(2, main)
     timer.start()
