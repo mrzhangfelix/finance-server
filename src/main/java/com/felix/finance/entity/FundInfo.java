@@ -9,9 +9,20 @@ public class FundInfo {
     private String fundamount;
     private String buyTime;
     private String fundName;
-    private String zeroInterestRate;
+//    单位净值
+    private String dwjz;
+//    持有数量
+    private String holdShare;
+//    持有金额
+    private String amountNow;
+//    估算值
+    private String gusuanzhi;
+//    7日买入金额
+    private String buyamount7;
+//    7日买入份额
+    private String buyshare7;
 
-    public FundInfo(String add, String zhangfu, String yingli, String amountChange, String fundcode, String fundamount, String buyTime, String fundName, String zeroInterestRate) {
+    public FundInfo(String add, String zhangfu, String yingli, String amountChange, String fundcode, String fundamount, String buyTime, String fundName) {
         this.add = add;
         this.zhangfu = zhangfu;
         this.yingli = yingli;
@@ -20,7 +31,6 @@ public class FundInfo {
         this.fundamount = fundamount;
         this.buyTime = buyTime;
         this.fundName = fundName;
-        this.zeroInterestRate = zeroInterestRate;
     }
 
     public String getAdd() {
@@ -95,12 +105,4 @@ public class FundInfo {
         return this;
     }
 
-    public String getZeroInterestRate() {
-        return zeroInterestRate;
-    }
-
-    public FundInfo setZeroInterestRate(String zeroInterestRate) {
-        this.zeroInterestRate = zeroInterestRate;
-        return this;
-    }
 }
