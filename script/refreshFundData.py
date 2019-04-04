@@ -13,6 +13,9 @@ base_url = 'http://fundgz.1234567.com.cn/js/{}.js?rt={}'
 sum = 0
 gztime = ''
 
+def get_week():
+    return time.strftime("%A",time.localtime())
+
 def get_html(url):
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0'}
@@ -24,7 +27,6 @@ def get_html(url):
         print('获取数据失败，请检查你的网络连接')
         print(str(traceback.format_exc()))
         return "ERROR"
-
 
 def get_NewAmount(url,amount):
     try:
@@ -90,10 +92,9 @@ def getfundconf():
     for fund,amountNew,yingli,zhangfu,name,dwjz,holdShare,amountNow,gsz in zip(fundconf['fundlist'],amountNewlist,yingliList,zhangfuList,namelist,dwjzlist,holdSharelist,amountNowlist,gszlist):
         fund['fundamount'] = amountNew+fund['add']+fund['amountChange']
         change=fund['add']+fund['amountChange'];
-        fund['buyamount7'].append(change)
-        fund['buyamount7'].pop(0)
-        fund['buyshare7'].append(round(change/gsz,2))
-        fund['buyshare7'].pop(0)
+        week=get_week()
+        fund['buyamount7'][week]=change
+        fund['buyshare7'][week]=round(change/gsz,2)
         fund['amountChange'] = 0
         fund['yingli'] = yingli
         fund['zhangfu'] = zhangfu
