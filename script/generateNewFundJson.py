@@ -14,10 +14,14 @@ sum = 0
 gztime = ''
 module_path = os.path.dirname(__file__)
 
+def get_week():
+    return time.strftime("%A",time.localtime())
+
 def get_html(url):
     try:
+        proxy = { "http": "http://z00475199:zpf805908873!@proxy.huawei.com:8080" }
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0'}
-        r=requests.get(url,timeout=30, headers = headers)
+        r=requests.get(url,timeout=30, headers = headers, proxies = proxy)
         r.raise_for_status()
         r.encoding='utf-8'
         return r.text
@@ -90,10 +94,9 @@ def getfundconf():
     for fund,amountNew,yingli,zhangfu,name,dwjz,holdShare,amountNow,gsz in zip(fundconf['fundlist'],amountNewlist,yingliList,zhangfuList,namelist,dwjzlist,holdSharelist,amountNowlist,gszlist):
         fund['fundamount'] = amountNew+fund['add']+fund['amountChange']
         change=fund['add']+fund['amountChange'];
-        fund['buyamount7'].append(change)
-        fund['buyamount7'].pop(0)
-        fund['buyshare7'].append(round(change/gsz,2))
-        fund['buyshare7'].pop(0)
+        week=get_week()
+        fund['buyamount7'][week]=change
+        fund['buyshare7'][week]=round(change/gsz,2)
         fund['amountChange'] = 0
         fund['yingli'] = yingli
         fund['zhangfu'] = zhangfu
