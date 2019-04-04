@@ -284,18 +284,18 @@
       "add":0,
       "amountChange":0,
       "buyamount7":{
-        "Monday":100,
-        "Tuesday":100,
-        "Wednesday":100,
-        "Thursday":100,
-        "Friday":100
+        "Monday":0,
+        "Tuesday":0,
+        "Wednesday":0,
+        "Thursday":0,
+        "Friday":0
       },
       "buyshare7":{
-        "Monday":100,
-        "Tuesday":100,
-        "Wednesday":100,
-        "Thursday":100,
-        "Friday":100
+        "Monday":0,
+        "Tuesday":0,
+        "Wednesday":0,
+        "Thursday":0,
+        "Friday":0
       }
     },
     {
@@ -338,18 +338,18 @@
       "add":0,
       "amountChange":0,
       "buyamount7":{
-        "Monday":100,
-        "Tuesday":100,
-        "Wednesday":100,
-        "Thursday":100,
-        "Friday":100
+        "Monday":0,
+        "Tuesday":0,
+        "Wednesday":0,
+        "Thursday":0,
+        "Friday":0
       },
       "buyshare7":{
-        "Monday":100,
-        "Tuesday":100,
-        "Wednesday":100,
-        "Thursday":100,
-        "Friday":100
+        "Monday":0,
+        "Tuesday":0,
+        "Wednesday":0,
+        "Thursday":0,
+        "Friday":0
       }
     }
   ]
