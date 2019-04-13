@@ -22,7 +22,7 @@ public class FinanceSrv {
     private static final String separator =File.separator;
 
 //    使用JSONObject的方式处理字符串，此方法要比javabean的方式更快，不过javabean的方式处理很方便
-    public String changeJsonByCode(String fundcode,String add,String amountChange,String fundamount){
+    public String changeJsonByCode(String fundcode,String add,String amountChange,String fundamount,String shareChange){
         long startTime=System.currentTimeMillis();
         String res="失败";
         File directory = new File("");
@@ -36,12 +36,13 @@ public class FinanceSrv {
                 fund.put("fundamount",fundamount);
                 fund.put("add",add);
                 fund.put("amountChange",amountChange);
+                fund.put("shareChange",shareChange);
             }
         }
         FileUtils.writeStringtoFile(obj.toString(),filePath);
         res="成功";
         long endTime=System.currentTimeMillis();
-        System.out.println("JavaObject方式程序运行时间： "+(endTime-startTime)+"ms");
+        System.out.println("JSONObject方式程序运行时间： "+(endTime-startTime)+"ms");
         return res;
     }
 
