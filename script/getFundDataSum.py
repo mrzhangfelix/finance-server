@@ -32,9 +32,15 @@ def cal_sum(url,amount):
 
 def main():
     global timer
+    # print(timer.getName())
     now = datetime.datetime.now()
-    if (now.hour==11 and now.minute==31)or(now.hour==15 and now.minute==1):
-        timer.cancel()
+    print('hour:'+str(now.hour)+',minute:'+str(now.minute))
+    if (now.hour==11 and now.minute==30):
+        print('中午休息90分钟！')
+        time.sleep(60*90)
+    if (now.hour == 15 and now.minute==0):
+        print('结束程序')
+        os._exit(0)
     codelist=[]
     amountlist=[]
     url_list=[]
@@ -55,7 +61,7 @@ def main():
     with codecs.open(fileName, 'a' ,"utf-8") as f:
         f.write(gztime+','+str(round(sum,2))+';\n')
     print(gztime+','+str(round(sum,2))+';')
-    timer = threading.Timer(60, main)
+    timer = threading.Timer(61, main)
     timer.start()
 
 if __name__ == '__main__':
