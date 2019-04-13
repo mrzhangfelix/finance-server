@@ -64,9 +64,9 @@ public class FinanceController {
 
     //    更新单个基金配置文件
     @RequestMapping("/changeJsonByCode")
-    public String changeJsonByCode(String fundcode,String fundamount,String add,String amountChange){
-        logger.info("fundcode:," + fundcode + "fundamount:," +fundamount+ "add:,"+add+ "amountChange:"+amountChange);
-        String res=financeSrv.changeJsonByCode(fundcode,add,amountChange,fundamount);
+    public String changeJsonByCode(String fundcode,String fundamount,String add,String amountChange,String shareChange){
+        logger.info("fundcode:," + fundcode + "fundamount:," +fundamount+ "add:,"+add+ "amountChange:"+amountChange+"shareChange:"+shareChange);
+        String res=financeSrv.changeJsonByCode(fundcode,add,amountChange,fundamount,shareChange);
         return res;
     }
 
