@@ -3,8 +3,8 @@ import datetime
 import time
 
 def doSth():
-    print('test')
-    # 假装做这件事情需要一分钟
+    print('开始记录数据')
+    getFundDataSum.main()
     time.sleep(60)
 
 def main():
@@ -14,13 +14,14 @@ def main():
         while True:
             now = datetime.datetime.now()
             # 到达设定时间，结束内循环
-            if (now.hour==9 and now.minute==30) or (now.hour==13 and now.minute==1):
+            if (now.hour==9 and now.minute==30):
                 break
-            # 不到时间就等20秒之后再次检测
+            # 不到时间就等40秒之后再次检测
             time.sleep(40)
         # 做正事，一天做一次
         doSth()
 
-main()
+if __name__ == '__main__':
+    main()
 
 
