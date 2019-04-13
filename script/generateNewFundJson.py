@@ -74,12 +74,24 @@ def getfundconf():
         gszlist.append(gsz)
     # 构造配置文件
     for fund,amountNew,yingli,zhangfu,name,dwjz,holdShare,amountNow,gsz in zip(fundconf['fundlist'],amountNewlist,yingliList,zhangfuList,namelist,dwjzlist,holdSharelist,amountNowlist,gszlist):
-        fund['fundamount'] = amountNew+fund['add']+fund['amountChange']
-        change=fund['add']+fund['amountChange'];
+        if not ('add') in fund:
+            fund['add']=0
+        if not ('amountChange') in fund:
+            fund['amountChange']=0
+        if not ('shareChange') in fund:
+            fund['shareChange']=0
+        if not ('buyamount7') in fund:
+            fund['buyamount7']={}
+        if not ('buyshare7') in fund:
+            fund['buyshare7']={}
+        buychange=int(fund['add'])+int(fund['amountChange']);
+        sellchange=round(float(fund['shareChange'])*gsz,2)
+        fund['fundamount'] = amountNew+buychange-sellchange
         week=get_week()
-        fund['buyamount7'][week]=change
-        fund['buyshare7'][week]=round(change/gsz,2)
+        fund['buyamount7'][week]=buychange
+        fund['buyshare7'][week]=round(buychange/gsz,2)
         fund['amountChange'] = 0
+        fund['shareChange'] = 0
         fund['yingli'] = yingli
         fund['zhangfu'] = zhangfu
         fund['fundName'] = name
