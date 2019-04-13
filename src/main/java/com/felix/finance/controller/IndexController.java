@@ -6,17 +6,20 @@ import com.felix.finance.util.PythonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 @RestController
 @RequestMapping("/finance")
 @CrossOrigin
-public class FinanceController {
+public class IndexController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -26,71 +29,35 @@ public class FinanceController {
     @Autowired
     private FinanceSrv financeSrv;
 
-//    实时更新数据
-    @RequestMapping("/refreshFundData")
-    public String refreshFundData(){
-        File directory = new File("");//设定为当前文件夹
-        String pythonPath=directory.getAbsolutePath()+separator+"script"+separator+"refreshFundData.py";
-        logger.info("开始执行实时数据脚本"+pythonPath);
-        return PythonUtils.executePython(pythonPath);
-    }
-
-    //    生成今日配置文件
-    @RequestMapping("/generateNewFundJson")
-    public String generateNewFundJson(){
-        File directory = new File("");//设定为当前文件夹
-        String pythonPath=directory.getAbsolutePath()+separator+"script"+separator+"generateNewFundJson.py";
-        logger.info("开始执行生成今日配置脚本"+pythonPath);
-        return PythonUtils.executePython(pythonPath);
-    }
-
 //    获取今日配置文件内容
-    @RequestMapping("/getTodayfundjson")
-    public String getTodayfundjson(){
-        logger.info("开始获取今日配置");
+    @RequestMapping("/getIndexInfo")
+    public String getIndexInfo(){
+        refreshIndexImg();
+        logger.info("开始获取指数信息");
         File directory = new File("");
-        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"fund.json";
-        return FileUtils.getfileContent(filePath);
+        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"getindexData.py";
+        return PythonUtils.executePython(filePath);
     }
 
-//    更新配置文件
-    @RequestMapping("/updatefundjson")
-    public String updatefundjson(){
-        logger.info("开始更新今日配置");
-        String lastTradingDate = getLastTradingDate();
-        return financeSrv.updatefundjson(lastTradingDate);
+    public void refreshIndexImg(){
+        logger.info("开始更新指数图片");
+        File directory = new File("");
+        String filePath= directory.getAbsolutePath()+separator+"script"+separator+"getindexImg.py";
+        PythonUtils.executePython(filePath);
     }
 
 
-    //    更新单个基金配置文件
-    @RequestMapping("/changeJsonByCode")
-    public String changeJsonByCode(String fundcode,String fundamount,String add,String amountChange,String shareChange){
-        logger.info("fundcode:," + fundcode + "fundamount:," +fundamount+ "add:,"+add+ "amountChange:"+amountChange+"shareChange:"+shareChange);
-        String res=financeSrv.changeJsonByCode(fundcode,add,amountChange,fundamount,shareChange);
-        return res;
+    @RequestMapping(value = "/getImg",produces = MediaType.IMAGE_JPEG_VALUE)
+    public byte[] getImage(String imgName) throws IOException {
+        File directory = new File("");
+        String filePath= directory.getAbsolutePath()+separator+"data"+separator+"indexImg"+separator+imgName+".png";
+        File file = new File(filePath);
+        FileInputStream inputStream = new FileInputStream(file);
+        byte[] bytes = new byte[inputStream.available()];
+        inputStream.read(bytes, 0, inputStream.available());
+        return bytes;
     }
 
-    //    添加一组数据
-    @RequestMapping("/addJsonData")
-    public String addJsonData(String fundcode,String fundamount){
-        logger.info("fundcode:" + fundcode + "fundamount:" +fundamount);
-        String res = financeSrv.addJsonData(fundcode,fundamount);
-        return res;
-    }
-
-    //    获取上一个交易日日期
-    @RequestMapping("/getLastTradingDate")
-    public String getLastTradingDate(){
-            File directory = new File("");//设定为当前文件夹
-            String pythonPath= directory.getAbsolutePath()+separator+"script"+separator+"getLastTradingDate.py";
-            logger.info("开始执行获取上一个交易日日期脚本："+pythonPath);
-            return PythonUtils.executePython(pythonPath);
-    }
-
-    @RequestMapping("/test")
-    public String test(String num){
-        return "success";
-    }
 
     public static void main(String[] args){
         File directory = new File("");//设定为当前文件夹
