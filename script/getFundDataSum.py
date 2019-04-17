@@ -8,6 +8,7 @@ import codecs
 import os
 import threading
 from utils.requests import get_html
+from utils.fund import get_url_amount,get_fundconf
 
 current_milli_time = lambda: int(round(time.time() * 1000))
 module_path = os.path.dirname(__file__)
@@ -41,17 +42,8 @@ def main():
     if (now.hour == 15 and now.minute==0):
         print('结束程序')
         os._exit(0)
-    codelist=[]
-    amountlist=[]
-    url_list=[]
-    with codecs.open(module_path+'\\'+'fund.json', 'r', 'utf-8') as f:
-        fundJson=f.read()
-        fundconf=json.loads(fundJson)
-    for fund in fundconf['fundlist']:
-        codelist.append(fund['fundcode'])
-        amountlist.append(float(fund['fundamount']))
-    for i in codelist:
-        url_list.append(base_url.format(i,current_milli_time()))
+    fundconf=get_fundconf()
+    url_list,amountlist=get_url_amount(fundconf)
     global sum
     sum=0
     for url,amount in zip(url_list,amountlist):
