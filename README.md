@@ -26,7 +26,9 @@
 基金配置字段：
 {
 >  "gztime":交易时间,
+
 >  "todayIncameSum":今日收入总和,
+
 >  "fundlist":[{
 >>      "fundName":基金名称,
 >>      "fundcode":基金编码,
@@ -47,7 +49,7 @@
 >>>				"Wednesday":100,
 >>>				"Tuesday":100
 >>			},
->>    "buyshare7":{
+>>      "buyshare7":{
 >>>				"Monday":124.21,
 >>>				"Thursday":123.67,
 >>>				"Friday":123.99,
@@ -55,4 +57,4 @@
 >>>				"Tuesday":122.38
 >>			},
 >		}]
-  }
+}
