@@ -23,3 +23,37 @@
 
 >2、设置基金收益提醒（邮件）
 
+基金配置字段：
+{
+  "gztime":交易时间,
+	"todayIncameSum":今日收入总和,
+  "fundlist":[
+		{
+      "fundName":基金名称,
+      "fundcode":基金编码,
+      "add":定投金额,
+			"zhangfu":涨幅,
+			"fundamount":持有金额,
+			"dwjz":单位净值,
+			"gusuanzhi":估算值,
+			"amountNow":现持有金额,
+			"yingli":盈利金额,
+			"amountChange":买入金额,
+			"holdShare":持有份额,
+			"shareChange":卖出份额,
+			"buyamount7":{一周内买入金额
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+      "buyshare7":{一周内买入份额
+				"Monday":124.21,
+				"Thursday":123.67,
+				"Friday":123.99,
+				"Wednesday":121.39,
+				"Tuesday":122.38
+			},
+		}]
+   }
