@@ -5,7 +5,7 @@ import traceback
 import codecs
 import os
 from utils.requests import get_html
-from utils.time import current_milli_time,get_week
+from utils.fund import get_url_amount,get_fundconf
 
 base_url = 'http://fundgz.1234567.com.cn/js/{}.js?rt={}'
 sum = 0
@@ -39,9 +39,6 @@ def get_NewAmount(url,amount):
     return amountNew,yingli,zhangfu,name,dwjz,holdShare,amountNow,gsz
 
 def getfundconf():
-    codelist=[]
-    amountlist=[]
-    url_list=[]
     amountNewlist=[]
     yingliList=[]
     zhangfuList=[]
@@ -50,15 +47,8 @@ def getfundconf():
     holdSharelist=[]
     amountNowlist=[]
     gszlist=[]
-    module_path = os.path.dirname(__file__)
-    with codecs.open(module_path+'\\'+'fund.json', 'r', 'utf-8') as f:
-        fundJson=f.read()
-        fundconf=json.loads(fundJson)
-    for fund in fundconf['fundlist']:
-        codelist.append(fund['fundcode'])
-        amountlist.append(float(fund['fundamount']))
-    for i in codelist:
-        url_list.append(base_url.format(i,current_milli_time()))
+    fundconf=get_fundconf()
+    url_list,amountlist=get_url_amount(fundconf)
     # 获取基金数据
     for url,amount in zip(url_list,amountlist):
         amountNew,yingli,zhangfu,name,dwjz,holdShare,amountNow,gsz=get_NewAmount(url,amount)
