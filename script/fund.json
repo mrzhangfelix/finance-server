@@ -1,389 +1,422 @@
 {
-	"gztime": "2019-04-12",
-	 "todayIncameSum": -16.99,
-	 "fundlist": [
-	{
-	"add": 100,
-	 "zhangfu": -0.42,
-	 "fundcode": "005693",
-	 "fundamount": 1173.33,
-	 "dwjz": 0.8099,
-	 "buyshare7": {
-	"Monday": 120.34,
-	 "Thursday": 123.67,
-	 "Friday": 123.99,
-	 "Wednesday": 121.39,
-	 "Tuesday": 120.5
-},
-	 "gusuanzhi": 0.8065,
-	 "amountNow": 1073.34,
-	 "yingli": -4.53,
-	 "amountChange": 0,
-	 "holdShare": 1330.86,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 100,
-	 "Thursday": 100,
-	 "Friday": 100,
-	 "Wednesday": 100,
-	 "Tuesday": 100
-},
-	 "fundName": "广发中证军工ETF联接C"
-},
-	 {
-	"add": 0,
-	 "zhangfu": 0.26,
-	 "fundcode": "004753",
-	 "fundamount": 488.27,
-	 "dwjz": 0.8666,
-	 "buyshare7": {
-	"Monday": 0,
-	 "Thursday": 0,
-	 "Friday": 0.0,
-	 "Wednesday": 0,
-	 "Tuesday": 0
-},
-	 "gusuanzhi": 0.8689,
-	 "amountNow": 488.3,
-	 "yingli": 1.27,
-	 "amountChange": 0,
-	 "holdShare": 561.97,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 0,
-	 "Thursday": 0,
-	 "Friday": 0,
-	 "Wednesday": 0,
-	 "Tuesday": 0
-},
-	 "fundName": "广发中证传媒ETF联接C"
-},
-	 {
-	"add": 100,
-	 "zhangfu": -1.14,
-	 "fundcode": "002978",
-	 "fundamount": 1186.92,
-	 "dwjz": 0.8445,
-	 "buyshare7": {
-	"Monday": 118.55,
-	 "Thursday": 118.46,
-	 "Friday": 119.77,
-	 "Wednesday": 115.04,
-	 "Tuesday": 116.86
-},
-	 "gusuanzhi": 0.8349,
-	 "amountNow": 1086.95,
-	 "yingli": -12.53,
-	 "amountChange": 0,
-	 "holdShare": 1301.89,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 100,
-	 "Thursday": 100,
-	 "Friday": 100,
-	 "Wednesday": 100,
-	 "Tuesday": 100
-},
-	 "fundName": "广发医药卫生联接C"
-},
-	 {
-	"add": 100,
-	 "zhangfu": 0.0,
-	 "fundcode": "002984",
-	 "fundamount": 1193.63,
-	 "dwjz": 0.6234,
-	 "buyshare7": {
-	"Monday": 159.41,
-	 "Thursday": 160.69,
-	 "Friday": 160.41,
-	 "Wednesday": 157.93,
-	 "Tuesday": 157.98
-},
-	 "gusuanzhi": 0.6234,
-	 "amountNow": 1093.63,
-	 "yingli": 0.0,
-	 "amountChange": 0,
-	 "holdShare": 1754.3,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 100,
-	 "Thursday": 100,
-	 "Friday": 100,
-	 "Wednesday": 100,
-	 "Tuesday": 100
-},
-	 "fundName": "广发中证环保ETF联接C"
-},
-	 {
-	"fundcode": "006487",
-	 "fundamount": 99.91,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": -0.09,
-	 "zhangfu": -0.09,
-	 "fundName": "广发中证1000指数C",
-	 "dwjz": 1.262,
-	 "holdShare": 79.24,
-	 "amountNow": 99.91,
-	 "gusuanzhi": 1.2609
-},
-	 {
-	"fundcode": "004855",
-	 "fundamount": 99.93,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": -0.07,
-	 "zhangfu": -0.07,
-	 "fundName": "广发中证全指汽车指数C",
-	 "dwjz": 0.8979,
-	 "holdShare": 111.37,
-	 "amountNow": 99.93,
-	 "gusuanzhi": 0.8973
-},
-	 {
-	"fundcode": "005064",
-	 "fundamount": 99.33,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": -0.67,
-	 "zhangfu": -0.67,
-	 "fundName": "广发中证全指家用电器指数C",
-	 "dwjz": 1.0232,
-	 "holdShare": 97.73,
-	 "amountNow": 99.32,
-	 "gusuanzhi": 1.0163
-},
-	 {
-	"add": 100,
-	 "zhangfu": 0.26,
-	 "fundcode": "004744",
-	 "fundamount": 1365.84,
-	 "dwjz": 1.7365,
-	 "buyshare7": {
-	"Monday": 56.09,
-	 "Thursday": 57.59,
-	 "Friday": 57.44,
-	 "Wednesday": 56.48,
-	 "Tuesday": 56.03
-},
-	 "gusuanzhi": 1.741,
-	 "amountNow": 1265.83,
-	 "yingli": 3.28,
-	 "amountChange": 0,
-	 "holdShare": 727.07,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 100,
-	 "Thursday": 100,
-	 "Friday": 100,
-	 "Wednesday": 100,
-	 "Tuesday": 100
-},
-	 "fundName": "易方达创业板ETF联接C"
-},
-	 {
-	"add": 100,
-	 "zhangfu": -0.21,
-	 "fundcode": "005918",
-	 "fundamount": 1193.7,
-	 "dwjz": 1.0584,
-	 "buyshare7": {
-	"Monday": 93.2,
-	 "Thursday": 94.5,
-	 "Friday": 94.69,
-	 "Wednesday": 92.55,
-	 "Tuesday": 92.77
-},
-	 "gusuanzhi": 1.0561,
-	 "amountNow": 1093.62,
-	 "yingli": -2.3,
-	 "amountChange": 0,
-	 "holdShare": 1035.53,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 100,
-	 "Thursday": 100,
-	 "Friday": 100,
-	 "Wednesday": 100,
-	 "Tuesday": 100
-},
-	 "fundName": "天弘沪深300指数C"
-},
-	 {
-	"add": 100,
-	 "zhangfu": 0.34,
-	 "fundcode": "001630",
-	 "fundamount": 1173.18,
-	 "dwjz": 0.7546,
-	 "buyshare7": {
-	"Monday": 128.62,
-	 "Thursday": 132.78,
-	 "Friday": 132.07,
-	 "Wednesday": 130.28,
-	 "Tuesday": 128.87
-},
-	 "gusuanzhi": 0.7572,
-	 "amountNow": 1073.22,
-	 "yingli": 3.64,
-	 "amountChange": 0,
-	 "holdShare": 1417.36,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 100,
-	 "Thursday": 100,
-	 "Friday": 100,
-	 "Wednesday": 100,
-	 "Tuesday": 100
-},
-	 "fundName": "天弘中证计算机主题指数C"
-},
-	 {
-	"add": 200,
-	 "zhangfu": -0.21,
-	 "fundcode": "005919",
-	 "fundamount": 2374.5,
-	 "dwjz": 0.9877,
-	 "buyshare7": {
-	"Monday": 198.47,
-	 "Thursday": 202.47,
-	 "Friday": 202.92,
-	 "Wednesday": 198.43,
-	 "Tuesday": 198.2
-},
-	 "gusuanzhi": 0.9856,
-	 "amountNow": 2174.45,
-	 "yingli": -4.58,
-	 "amountChange": 0,
-	 "holdShare": 2206.22,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Monday": 200,
-	 "Thursday": 200,
-	 "Friday": 200,
-	 "Wednesday": 200,
-	 "Tuesday": 200
-},
-	 "fundName": "天弘中证500指数C"
-},
-	 {
-	"fundcode": "001589",
-	 "fundamount": 99.79,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": -0.21,
-	 "zhangfu": -0.21,
-	 "fundName": "天弘中证800指数C",
-	 "dwjz": 0.9434,
-	 "holdShare": 106.0,
-	 "amountNow": 99.79,
-	 "gusuanzhi": 0.9414
-},
-	 {
-	"fundcode": "001618",
-	 "fundamount": 100.18,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": 0.18,
-	 "zhangfu": 0.18,
-	 "fundName": "天弘中证电子指数C",
-	 "dwjz": 0.8704,
-	 "holdShare": 114.89,
-	 "amountNow": 100.18,
-	 "gusuanzhi": 0.872
-},
-	 {
-	"fundcode": "001632",
-	 "fundamount": 99.87,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": -0.13,
-	 "zhangfu": -0.13,
-	 "fundName": "天弘中证食品饮料指数C",
-	 "dwjz": 1.6072,
-	 "holdShare": 62.22,
-	 "amountNow": 99.87,
-	 "gusuanzhi": 1.6051
-},
-	 {
-	"fundcode": "001549",
-	 "fundamount": 99.74,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": -0.26,
-	 "zhangfu": -0.26,
-	 "fundName": "天弘上证50指数C",
-	 "dwjz": 1.152,
-	 "holdShare": 86.81,
-	 "amountNow": 99.74,
-	 "gusuanzhi": 1.149
-},
-	 {
-	"fundcode": "001595",
-	 "fundamount": 100.01,
-	 "add": 0,
-	 "amountChange": 0,
-	 "shareChange": 0,
-	 "buyamount7": {
-	"Friday": 0
-},
-	 "buyshare7": {
-	"Friday": 0.0
-},
-	 "yingli": 0.01,
-	 "zhangfu": 0.01,
-	 "fundName": "天弘中证银行指数C",
-	 "dwjz": 1.1548,
-	 "holdShare": 86.6,
-	 "amountNow": 100.01,
-	 "gusuanzhi": 1.1549
-}]
+	"gztime":"2019-04-16",
+	"todayIncameSum":238.52,
+	"fundlist":[
+		{
+			"add":100,
+			"zhangfu":1.49,
+			"fundcode":"005693",
+			"fundamount":1388.73,
+			"dwjz":0.8051,
+			"buyshare7":{
+				"Monday":124.21,
+				"Thursday":123.67,
+				"Friday":123.99,
+				"Wednesday":121.39,
+				"Tuesday":122.38
+			},
+			"gusuanzhi":0.8171,
+			"amountNow":1288.74,
+			"yingli":18.92,
+			"amountChange":0,
+			"holdShare":1577.21,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+			"fundName":"广发中证军工ETF联接C"
+		},
+		{
+			"add":0,
+			"zhangfu":2.07,
+			"fundcode":"004753",
+			"fundamount":489.7,
+			"dwjz":0.8531,
+			"buyshare7":{
+				"Monday":0,
+				"Thursday":0,
+				"Friday":0,
+				"Wednesday":0,
+				"Tuesday":0
+			},
+			"gusuanzhi":0.8708,
+			"amountNow":489.72,
+			"yingli":9.93,
+			"amountChange":0,
+			"holdShare":562.38,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":0,
+				"Thursday":0,
+				"Friday":0,
+				"Wednesday":0,
+				"Tuesday":0
+			},
+			"fundName":"广发中证传媒ETF联接C"
+		},
+		{
+			"add":100,
+			"zhangfu":1.78,
+			"fundcode":"002978",
+			"fundamount":1395.46,
+			"dwjz":0.8252,
+			"buyshare7":{
+				"Monday":121.18,
+				"Thursday":118.46,
+				"Friday":119.77,
+				"Wednesday":115.04,
+				"Tuesday":119.06
+			},
+			"gusuanzhi":0.8399,
+			"amountNow":1295.47,
+			"yingli":22.66,
+			"amountChange":0,
+			"holdShare":1542.41,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+			"fundName":"广发医药卫生联接C"
+		},
+		{
+			"add":100,
+			"zhangfu":1.74,
+			"fundcode":"002984",
+			"fundamount":1400.1,
+			"dwjz":0.6162,
+			"buyshare7":{
+				"Monday":162.42,
+				"Thursday":160.69,
+				"Friday":160.41,
+				"Wednesday":157.93,
+				"Tuesday":159.52
+			},
+			"gusuanzhi":0.6269,
+			"amountNow":1300.06,
+			"yingli":22.23,
+			"amountChange":0,
+			"holdShare":2073.79,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+			"fundName":"广发中证环保ETF联接C"
+		},
+		{
+			"fundcode":"006487",
+			"fundamount":101.13,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":1.99,
+			"zhangfu":2.01,
+			"fundName":"广发中证1000指数C",
+			"dwjz":1.2512,
+			"holdShare":79.24,
+			"amountNow":101.13,
+			"gusuanzhi":1.2763
+		},
+		{
+			"fundcode":"004855",
+			"fundamount":99.66,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":1.46,
+			"zhangfu":1.49,
+			"fundName":"广发中证全指汽车指数C",
+			"dwjz":0.8797,
+			"holdShare":111.63,
+			"amountNow":99.66,
+			"gusuanzhi":0.8928
+		},
+		{
+			"fundcode":"005064",
+			"fundamount":101.56,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":2.13,
+			"zhangfu":2.14,
+			"fundName":"广发中证全指家用电器指数C",
+			"dwjz":1.0174,
+			"holdShare":97.73,
+			"amountNow":101.55,
+			"gusuanzhi":1.0391
+		},
+		{
+			"add":100,
+			"zhangfu":1.75,
+			"fundcode":"004744",
+			"fundamount":1568.97,
+			"dwjz":1.7128,
+			"buyshare7":{
+				"Monday":58.38,
+				"Thursday":57.59,
+				"Friday":57.44,
+				"Wednesday":56.48,
+				"Tuesday":57.38
+			},
+			"gusuanzhi":1.7427,
+			"amountNow":1468.9,
+			"yingli":25.26,
+			"amountChange":0,
+			"holdShare":842.89,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+			"fundName":"易方达创业板ETF联接C"
+		},
+		{
+			"add":100,
+			"zhangfu":2.64,
+			"fundcode":"005918",
+			"fundamount":1424.06,
+			"dwjz":1.0528,
+			"buyshare7":{
+				"Monday":94.98,
+				"Thursday":94.5,
+				"Friday":94.69,
+				"Wednesday":92.55,
+				"Tuesday":92.55
+			},
+			"gusuanzhi":1.0805,
+			"amountNow":1323.94,
+			"yingli":34.06,
+			"amountChange":0,
+			"holdShare":1225.3,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+			"fundName":"天弘沪深300指数C"
+		},
+		{
+			"add":100,
+			"zhangfu":2.7,
+			"fundcode":"001630",
+			"fundamount":1394.67,
+			"dwjz":0.7477,
+			"buyshare7":{
+				"Monday":133.58,
+				"Thursday":132.78,
+				"Friday":132.07,
+				"Wednesday":130.28,
+				"Tuesday":130.23
+			},
+			"gusuanzhi":0.7679,
+			"amountNow":1294.69,
+			"yingli":34.04,
+			"amountChange":0,
+			"holdShare":1686.01,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":100,
+				"Thursday":100,
+				"Friday":100,
+				"Wednesday":100,
+				"Tuesday":100
+			},
+			"fundName":"天弘中证计算机主题指数C"
+		},
+		{
+			"add":200,
+			"zhangfu":2.03,
+			"fundcode":"005919",
+			"fundamount":2803.26,
+			"dwjz":0.9755,
+			"buyshare7":{
+				"Monday":204.94,
+				"Thursday":202.47,
+				"Friday":202.92,
+				"Wednesday":198.43,
+				"Tuesday":200.94
+			},
+			"gusuanzhi":0.9953,
+			"amountNow":2603.26,
+			"yingli":51.79,
+			"amountChange":0,
+			"holdShare":2615.55,
+			"shareChange":0,
+			"buyamount7":{
+				"Monday":200,
+				"Thursday":200,
+				"Friday":200,
+				"Wednesday":200,
+				"Tuesday":200
+			},
+			"fundName":"天弘中证500指数C"
+		},
+		{
+			"fundcode":"001589",
+			"fundamount":101.78,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":2.47,
+			"zhangfu":2.49,
+			"fundName":"天弘中证800指数C",
+			"dwjz":0.9369,
+			"holdShare":106,
+			"amountNow":101.78,
+			"gusuanzhi":0.9602
+		},
+		{
+			"fundcode":"001618",
+			"fundamount":102.47,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":2.92,
+			"zhangfu":2.93,
+			"fundName":"天弘中证电子指数C",
+			"dwjz":0.8658,
+			"holdShare":114.98,
+			"amountNow":102.46,
+			"gusuanzhi":0.8911
+		},
+		{
+			"fundcode":"001632",
+			"fundamount":100.59,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":1.6,
+			"zhangfu":1.62,
+			"fundName":"天弘中证食品饮料指数C",
+			"dwjz":1.5905,
+			"holdShare":62.24,
+			"amountNow":100.59,
+			"gusuanzhi":1.6162
+		},
+		{
+			"fundcode":"001549",
+			"fundamount":103.07,
+			"add":0,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":3.19,
+			"zhangfu":3.19,
+			"fundName":"天弘上证50指数C",
+			"dwjz":1.1505,
+			"holdShare":86.81,
+			"amountNow":103.06,
+			"gusuanzhi":1.1872
+		},
+		{
+			"fundcode":"001595",
+			"fundamount":104.36,
+			"add":100,
+			"amountChange":0,
+			"shareChange":0,
+			"buyamount7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"buyshare7":{
+				"Friday":0,
+				"Monday":0,
+				"Tuesday":0
+			},
+			"yingli":3.87,
+			"zhangfu":3.85,
+			"fundName":"天弘中证银行指数C",
+			"dwjz":1.1599,
+			"holdShare":86.64,
+			"amountNow":104.37,
+			"gusuanzhi":1.2046
+		}
+	]
 }
